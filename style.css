@@ -302,7 +302,7 @@ nav a:focus {
     }
     
     .project-card {
-        width: 100%; /* Kartu mengambil seluruh lebar yang tersedia */
+        width: 400px; /* Kartu mengambil seluruh lebar yang tersedia */
         height: auto;
     }
 
