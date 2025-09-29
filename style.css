@@ -209,6 +209,151 @@ nav a:focus {
     stroke: var(--primary-bg);
 }
 
+@media (max-width: 480px) {
+    /* ==== GLOBAL STYLES FOR MOBILE ==== */
+    body {
+        padding: 0 10px;
+    }
+
+    /* ==== NAVBAR FIXES ==== */
+    nav {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 5px 10px;
+        display: block;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        gap: 5px; /* Kurangi jarak antar item */
+    }
+
+    nav a {
+        font-size: 11px; /* Kurangi ukuran font agar tidak tumpang tindih */
+        min-width: unset;
+        padding: 5px;
+    }
+
+    /* ==== HERO SECTION FIXES ==== */
+    .hero-title {
+        font-size: 35px; /* Sesuaikan ukuran font judul */
+        line-height: 1.2;
+    }
+
+    .gradient-text {
+        font-size: 40px; /* Sesuaikan ukuran font gradient */
+    }
+
+    .profile-card {
+        flex-direction: column; /* Tumpuk elemen ke bawah */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 150px; /* Ukuran yang lebih kecil untuk foto profil */
+        height: 150px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .profile-name {
+        font-size: 28px;
+    }
+
+    .greeting-text {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* ==== BIO SECTION FIXES ==== */
+    .bio-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sapaan-character {
+        width: 100px; /* Perkecil gambar karakter sapaan */
+        height: auto;
+    }
+
+    .bio-title, .gradient-text-bio {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bio-description {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* ==== PROJECTS SECTION FIXES ==== */
+    .project-grid {
+        flex-direction: column;
+        padding: 0 15px; /* Tambahkan padding agar tidak menempel */
+    }
+    
+    .project-card {
+        width: 100%; /* Kartu mengambil seluruh lebar yang tersedia */
+        height: auto;
+    }
+
+    /* ==== EXPERIENCES SECTION FIXES ==== */
+    .experiences-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .experience-card {
+        width: 100%; /* Kartu pengalaman mengambil seluruh lebar */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .experience-title {
+        font-size: 16px;
+    }
+
+    .experience-description {
+        font-size: 12px;
+    }
+
+    /* ==== CONTACT SECTION FIXES ==== */
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .linkedin-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         display: inline-block; 
