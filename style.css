@@ -332,8 +332,18 @@ nav a:focus {
         width: 100%;   /* Supaya gak kepotong */
     }
 
+    .card-project-title {
+        font-size: 20px;
+        height: auto; /* Memastikan deskripsi bisa memanjang */
+    }
+
+    .card-project-subtitle {
+        font-size: 100px;
+        height: auto; /* Memastikan deskripsi bisa memanjang */
+    }
+
     .card-project-desc {
-        font-size: 12px;
+        font-size: 8px;
         height: auto; /* Memastikan deskripsi bisa memanjang */
     }
 
