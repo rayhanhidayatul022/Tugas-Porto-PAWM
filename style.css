@@ -240,6 +240,11 @@ nav a:focus {
         line-height: 1.2;
     }
 
+    .hero-section {
+        padding: 80px 10px;
+        text-align: center;
+    }
+
     .gradient-text {
         font-size: 40px; /* Sesuaikan ukuran font gradient */
     }
@@ -295,15 +300,42 @@ nav a:focus {
         text-align: center;
     }
 
-    /* ==== PROJECTS SECTION FIXES ==== */
     .project-grid {
+        display: flex;
         flex-direction: column;
-        padding: 0 15px; /* Tambahkan padding agar tidak menempel */
+        align-items: center; /* Untuk memposisikan di tengah */
+        gap: 20px;
+        width: 100%; /* Pastikan ini ada agar grid mengisi ruang */
     }
-    
+
     .project-card {
-        width: 400px; /* Kartu mengambil seluruh lebar yang tersedia */
+        width: 100%; /* Kartu mengambil seluruh lebar dari project-grid */
         height: auto;
+    }
+
+    .card-project-desc {
+        font-size: 12px;
+        height: auto; /* Memastikan deskripsi bisa memanjang */
+    }
+
+
+    .check-button {
+        display: inline-flex;
+        justify-content: center;
+        align-self: flex-end;
+        align-items: center;
+        width: 30px;
+        height: 15px;
+        border-radius: 50px;
+        border: 1px solid var(--text-color);
+        background: transparent;
+        color: var(--text-color);
+        text-decoration: none;
+        font-family: Inter;
+        font-size: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        margin-top: 30px; 
     }
 
     /* ==== EXPERIENCES SECTION FIXES ==== */
@@ -319,22 +351,30 @@ nav a:focus {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        display: flex;
+        gap: 15px;
     }
 
     .experience-icon {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 
     .experience-title {
-        font-size: 16px;
+        color: var(--text-color);
+        font-size: 3px;
+        font-weight: 300;
+        margin: 0;
+        line-height: auto;
     }
 
     .experience-description {
-        font-size: 12px;
+        color: var(--text-color);
+        font-size: 3px;
+        font-weight: 400;
+        line-height: auto;
     }
 
-    /* ==== CONTACT SECTION FIXES ==== */
     .contact-title {
         font-size: 28px;
     }
@@ -392,6 +432,7 @@ nav a:focus {
         color: var(--blue-text);
         font-weight: 600;
     }
+
     .project-grid {
         grid-template-columns: 1fr;
         padding: 0 10px;
@@ -401,7 +442,6 @@ nav a:focus {
     .project-card {
         width: 100%; 
         height: auto;
-
     }
 
     .hero-title {
@@ -711,7 +751,7 @@ nav a:focus {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 73px; /* 365% */
+  line-height: 1.2; /* 365% */
   margin-top: 15px;
 }
 
@@ -727,7 +767,7 @@ nav a:focus {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 73px; /* 365% */
+  line-height: 1.2; /* 365% */
 }
 
 .card-project-desc{
