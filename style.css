@@ -309,8 +309,27 @@ nav a:focus {
     }
 
     .project-card {
-        width: 100%; /* Kartu mengambil seluruh lebar dari project-grid */
+        width: 100%;
         height: auto;
+        padding: 10px;
+    }
+
+    .project-image {
+        width: 100%;   /* Gambar isi penuh card */
+        height: auto;  /* Tinggi menyesuaikan proporsi */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-content-project {
+        padding: 10px;
+        text-align: justify; /* Biar lebih rapi di mobile */
+    }
+
+    .card-project-title,
+    .card-project-subtitle,
+    .card-project-desc {
+        width: 100%;   /* Supaya gak kepotong */
     }
 
     .card-project-desc {
