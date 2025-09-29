@@ -210,6 +210,43 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
+    nav {
+        display: inline-block; 
+        background-color: var(--primary-bg); 
+        border: 1px solid var(--light-grey); 
+        border-radius: 15px; 
+        padding: 5px 25px; 
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 10px;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+        display: inline-block;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    nav a:hover {
+        color: var(--dark-grey);
+    }
+
+    nav a:focus {
+        color: var(--blue-text);
+        font-weight: 600;
+    }
     .project-grid {
         grid-template-columns: 1fr;
         padding: 0 10px;
@@ -217,20 +254,48 @@ nav a:focus {
     }
 
     .project-card {
-        width: auto; 
+        width: 100%; 
         height: auto;
+
+    }
+
+    .hero-title {
+        font-size: 50px; 
+        line-height: auto; 
+        font-weight: 600;
+    }
+
+    .gradient-text {
+        font-family: Inter;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        background: linear-gradient(181deg, #119EBE 8.49%, #385D65 71.27%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 5px;
     }
     
     .profile-card {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
         border-radius: 281px;
+        padding: 0 15px;
+    }
+
+    .greeting-text {
+        font-size: 25px;
+        font-weight: 400;
+        font-style: normal;
+        color: #FFF;
+        margin-bottom: 5px;
     }
     
     .profile-photo {
         width: 350px;
-        height: 400px;
+        height: auto;
         flex-shrink: 0;
         aspect-ratio: 397/435;
         border-radius: 281px;
@@ -243,9 +308,9 @@ nav a:focus {
     .profile-name {
         color: #FFF;
         font-family: Inter;
-        font-size: 64px;
-        font-weight: 500;
-        line-height: 73px; /* 114.063% */
+        font-size: 30px;
+        font-weight: 400;
+        line-height: auto; /* 114.063% */
     }
 
     .greeting-text {
@@ -257,12 +322,79 @@ nav a:focus {
         line-height: normal;
     }
 
-      .card-content {
+    .card-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 15px;
       height: 100%;
+    }
+
+    .experiences-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .experience-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 20px;
+    }
+
+    .experience-icon {
+        margin-bottom: 10px;
+    }
+    
+    .bio-title {
+        color: #FFF;
+        font-family: Inter;
+        font-size:10px;
+        font-style: normal;
+        font-weight: 600;
+        text-align: left;}
+
+    .gradient-text-bio {
+        background: linear-gradient(90deg, #FFF 0%, #9CAEB2 27.4%, #385D65 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        }
+
+    .bio-description {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        text-align: justify;}
+
+    .bold-text {
+        font-weight: bold;
+    }
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .bio-content {
+        text-align: center;
+    }
+
+    .bio-description {
+        text-align: center;
+    }
+
+    .projects-section {
+      text-align: center;
     }
 }
 
@@ -275,8 +407,7 @@ nav a:focus {
     max-width: 900px;
     border-radius: var(--corner-radius);
     animation: slide-up 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-}
+    opacity: 0;}
 
 .sapaan-character {
     width: 150px;
@@ -496,16 +627,6 @@ nav a:focus {
     color: var(--primary-bg);
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-        justify-content: center;
-    }
-    .project-card {
-        width: 100%;
-        height: auto;
-    }
-}
 
 @media (max-width: 1024px) {
     .project-grid {
@@ -615,10 +736,59 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
-  
     .experiences-grid {
         grid-template-columns: 1fr;
         padding: 0 15px;
+    }
+
+    .card-project-title{
+    display: flex;
+    width: 189px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; /* 365% */
+    margin-top: 5px;
+    }
+
+    .card-project-subtitle{
+    display: flex;
+    width: 216px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+    }
+
+    .card-project-desc{
+    display: flex;
+    width: auto;
+    height: 29px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    align-items: justify;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: 20px;
+    text-align: justify;
     }
 
     .experience-card {
