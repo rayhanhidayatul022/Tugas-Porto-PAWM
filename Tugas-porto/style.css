@@ -1550,6 +1550,67 @@ nav a.active {
         width: 70px;
         height: 70px;
     }
+    
+    /* Mobile: Make buttons always visible */
+    .check-button {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: all;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    /* Mobile: Project cards flat (no 3D tilt) */
+    .project-card {
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto !important;
+        transform: none !important;
+        height: auto !important;
+        min-height: auto;
+    }
+    
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(3),
+    .project-card:nth-child(4) {
+        align-self: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .card-content-project {
+        padding: 20px;
+    }
+    
+    .project-grid {
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    /* Mobile: Remove hover-dependent effects */
+    .project-card:hover {
+        transform: none !important;
+    }
+    
+    /* Mobile: Achievement cards */
+    .achievement-card:hover {
+        transform: none !important;
+    }
+    
+    /* Mobile: Tool cards always show hover state */
+    .tool-card {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.1) 0%,
+            rgba(255, 107, 53, 0.05) 100%
+        );
+        border-color: rgba(255, 107, 53, 0.3);
+    }
 }
 
 /* ========================================
@@ -2246,5 +2307,67 @@ nav a.active {
     
     nav ul.mobile-active {
         left: 0;
+    }
+}
+
+/* ========================================
+   TOUCH DEVICE SUPPORT
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* For touch devices: Make all interactive elements accessible */
+    
+    /* Show buttons always on touch devices */
+    .check-button {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: all;
+    }
+    
+    /* Disable hover-only effects on touch devices */
+    .project-card:hover,
+    .achievement-card:hover,
+    .experience-card:hover {
+        transform: none !important;
+    }
+    
+    /* Make tool cards always visible */
+    .tool-card {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 107, 53, 0.08) 0%,
+            rgba(255, 107, 53, 0.04) 100%
+        );
+        border-color: rgba(255, 107, 53, 0.2);
+    }
+    
+    /* Timeline cards on touch - no hover needed */
+    .achievement-card {
+        border-color: rgba(255, 107, 53, 0.3);
+    }
+}
+
+/* ========================================
+   SMALL MOBILE DEVICES (< 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .check-button {
+        padding: 10px 24px;
+        font-size: 12px;
+    }
+    
+    .project-card {
+        max-width: 100%;
+    }
+    
+    .more-projects-text {
+        font-size: 16px;
+    }
+    
+    .more-projects-text::before {
+        left: -20px;
+    }
+    
+    .more-projects-text::after {
+        right: -20px;
     }
 }
